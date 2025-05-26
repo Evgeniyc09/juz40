@@ -10,7 +10,7 @@ $textBlack: #373737;
 
 .v-header {
   position: relative;
-  margin: 30px 0 25px;
+  margin: 30px -20px 25px;
   padding: 12px 20px 28px;
   background: #ffcbd3;
 
@@ -2755,7 +2755,7 @@ $textBlack: #373737;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20px 0 0;
+  margin: 0;
   padding: 10px 10px 10px 12px;
 
   svg {

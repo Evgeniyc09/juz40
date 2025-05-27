@@ -316,11 +316,10 @@ $textBlack: #373737;
     text-decoration: none;
     width: 20%;
     text-align: center;
-    color: #2a353d;
-    opacity: 0.5;
+    color: #94999d;
 
     &--active {
-      color: #2a353d;
+      color: #ff4663;
       opacity: 1;
     }
   }
@@ -329,8 +328,8 @@ $textBlack: #373737;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 22px;
-    margin: 0 0 10px;
+    height: 32px;
+    margin: 0 0 8px;
   }
 
   &__text {
@@ -2766,5 +2765,149 @@ $textBlack: #373737;
     font-weight: 600;
     font-size: 10px;
     margin: 4px 0 0;
+  }
+}
+
+.v-section__header-badge {
+  position: relative;
+  top: -32px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 4px 10px;
+  color: #ffffff;
+  background: #ff8c9e;
+  border-radius: 9.19px;
+}
+
+.s-section {
+  &__personal-menu {
+    background-color: #e05369;
+    border-radius: 15px;
+    color: white;
+    padding: 16px;
+    margin: 0 0 30px;
+  }
+
+  &__personal-title {
+    font-family: "SFProDisplaySemibold";
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    margin: 0 0 8px;
+  }
+
+  &__personal-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__personal-btn {
+    display: inline-block;
+    font-family: "SFProDisplaySemibold";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    padding: 9px 22px;
+    border-radius: 20px;
+    color: #373737;
+  }
+}
+
+.s-recipe {
+  &__category-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 32px 0 16px;
+  }
+
+  &__category-item {
+    width: 100px;
+    background: #eceef2;
+    border-radius: 13px;
+    padding: 20px;
+    margin: 0 0 17px;
+    text-align: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  &__category-item-icon {
+    height: 30px;
+    margin: 0 0 4px;
+  }
+
+  &__category-item-label {
+    font-family: "SFProDisplaySemibold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 4% 0 0;
+
+    color: #373737;
+  }
+}
+
+.s-recipe {
+  &__info-item {
+    width: 100%;
+    display: inline-block;
+    font-family: "SFProDisplaySemibold";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #e05369;
+    padding: 18px 22px;
+    border-radius: 30px;
+    margin: 0 0 8px;
+  }
+}
+
+.v-gradient {
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 148px;
+    color: white;
+    font-size: 12px;
+    background: $accentColor;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    min-height: 39px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &:nth-child(1) {
+      background: linear-gradient(90deg, #e05369 0%, #ff97a7 100%);
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(90deg, #f68798 99.99%, #ff97a7 100%);
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(90deg, #ff97a7 0%, #e05369 100%);
+    }
   }
 }

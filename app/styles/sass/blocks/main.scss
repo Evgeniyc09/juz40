@@ -316,6 +316,12 @@
     position: relative;
     height: 168px;
     border-radius: 16px;
+
+    img {
+      height: 168px;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
@@ -376,4 +382,48 @@
       );
     }
   }
+}
+
+.main__quote {
+  position: relative;
+  padding: 25px 45px;
+  text-align: center;
+  font-family: "Merriweather", serif !important;
+  font-style: italic;
+  color: #c19a6b;
+  font-size: 14px;
+  line-height: 17px;
+  margin: -42px 0 10px;
+  background: url("../images/dist/blur-white.png") no-repeat center/cover;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 13px;
+    left: 30px;
+    position: absolute;
+    top: 20px;
+    width: 13px;
+    background: url("../images/dist/quote.svg") no-repeat center/cover;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 13px;
+    right: 30px;
+    position: absolute;
+    bottom: 20px;
+    transform: rotate(180deg);
+    width: 13px;
+    background: url("../images/dist/quote.svg") no-repeat center/cover;
+  }
+}
+
+.font-monrope {
+  font-family: "Manrope", sans-serif !important;
+}
+
+.font-merriweather {
+  font-family: "Merriweather", serif !important;
 }

@@ -21,6 +21,12 @@
     margin: 0 0 4px;
   }
 
+  &__image {
+    img {
+      width: 225px;
+    }
+  }
+
   &__description {
     font-size: 14px;
     line-height: 17px;

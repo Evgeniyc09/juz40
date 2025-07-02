@@ -68,92 +68,92 @@
   </div>
   <div class="compass-back">
     <div class="compass-back__items">
-      <div class="compass-back__item compass-back__item--1">
+      <div id="n" class="compass-back__item compass-back__item--1">
         <div class="fly-star">
-          <span>3</span>
-          <span>6</span>
-          <span>1</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
-      <div class="compass-back__item compass-back__item--2">
+      <div id="ne" class="compass-back__item compass-back__item--2">
         <div class="fly-star">
-          <span>1</span>
-          <span>5</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
-        </div>
-      </div>
-
-      <div class="compass-back__item compass-back__item--3">
-        <div class="fly-star">
-          <span>1</span>
-          <span>7</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--4">
+      <div id="e" class="compass-back__item compass-back__item--3">
         <div class="fly-star">
-          <span>2</span>
-          <span>1</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--5">
+      <div id="se" class="compass-back__item compass-back__item--4">
         <div class="fly-star">
-          <span>1</span>
-          <span>2</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--6">
+      <div id="s" class="compass-back__item compass-back__item--5">
         <div class="fly-star">
-          <span>2</span>
-          <span>9</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--7">
+      <div id="sw" class="compass-back__item compass-back__item--6">
         <div class="fly-star">
-          <span>2</span>
-          <span>5</span>
-          <span>8</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--8">
+      <div id="w" class="compass-back__item compass-back__item--7">
         <div class="fly-star">
-          <span>2</span>
-          <span>5</span>
-          <span>8</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
 
-      <div class="compass-back__item compass-back__item--center">
+      <div id="nw" class="compass-back__item compass-back__item--8">
         <div class="fly-star">
-          <span>2</span>
-          <span>9</span>
-          <span>2</span>
-          <div class="flyingStartsYear">9</div>
-          <div class="flyingStartsMonth">2</div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
+        </div>
+      </div>
+
+      <div id="center" class="compass-back__item compass-back__item--center">
+        <div class="fly-star">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="flyingStartsYear"></div>
+          <div class="flyingStartsMonth"></div>
         </div>
       </div>
     </div>
@@ -317,30 +317,71 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const replacementStarsUrl = './starsMockData.json';
     let map;
     let cursorAngle = 0;
     let lastCoords = null;
     let debounceTimeout = null;
 
     function fetchCompassData(coords, cursorAngle) {
-      setTimeout(() => {
-        const data = {
-          stars: [
-            { sector: 1, values: [3, 6, 1], year: 9, month: 2 },
-            { sector: 2, values: [1, 5, 2], year: 9, month: 2 },
-            { sector: 3, values: [1, 7, 2], year: 9, month: 2 },
-            { sector: 4, values: [2, 1, 2], year: 9, month: 2 },
-            { sector: 5, values: [1, 2, 2], year: 9, month: 2 },
-            { sector: 6, values: [2, 9, 2], year: 9, month: 2 },
-            { sector: 7, values: [2, 5, 8], year: 9, month: 2 },
-            { sector: 8, values: [2, 5, 8], year: 9, month: 2 },
-            { sector: "center", values: [2, 9, 2], year: 9, month: 2 }
-          ]
-        };
+      const period = 9;
+      const year = 2025;
+      const month = 2;
+      const cursorSector = getSectorFromAngle(cursorAngle);
 
-        console.log('asdas')
-        fillCompassItems(data.stars);
-      }, 500);
+      fetch(`${replacementStarsUrl}?period=${period}&year=${year}&month=${month}`)
+        .then(response => {
+          if (!response.ok) throw new Error('Ошибка загрузки звёзд');
+          return response.json();
+        })
+        .then(data => {
+          console.log(data.stars)
+          console.log(cursorSector)
+          const stars = transformStarsToCompassArray(data.stars, data.year_stars, data.month_stars, cursorSector);
+          fillCompassItems(stars);
+
+        })
+        .catch(err => {
+          console.error('Ошибка получения данных:', err);
+        });
+    }
+    function getSectorFromAngle(angle) {
+      const sectors = [
+        's1', 's2', 's3',
+        'sw1', 'sw2', 'sw3',
+        'w1', 'w2', 'w3',
+        'nw1', 'nw2', 'nw3',
+        'n1', 'n2', 'n3',
+        'ne1', 'ne2', 'ne3',
+        'e1', 'e2', 'e3',
+        'se1', 'se2', 'se3'
+      ];
+
+      // Всего 24 сектора по 15 градусов (360 / 24)
+      const index = Math.floor((angle % 360) / 15);
+      return sectors[index] || 's1';
+    }
+    function transformStarsToCompassArray(starsRaw, years, months, cursorSector = 's1') {
+      const directionOrder = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw', 'center'];
+      const cursorData = starsRaw[cursorSector];
+
+      if (!cursorData) {
+        console.warn(`Сектор ${cursorSector} не найден в данных`);
+        return [];
+      }
+
+      return directionOrder.map((dir, i) => {
+        const values = cursorData[dir];
+        const year = years[dir];
+        const month = months[dir];
+
+        return {
+          sector: dir,
+          values: values || [],
+          year: year,
+          month: month
+        };
+      });
     }
 
     function debounceFetchCompassData(coords, cursorAngle) {
@@ -352,10 +393,7 @@
 
     function fillCompassItems(stars) {
       stars.forEach(star => {
-        const sel = star.sector === 'center'
-          ? '.compass-back__item--center'
-          : `.compass-back__item--${star.sector}`;
-        const item = document.querySelector(sel);
+        const item = document.getElementById(`${star.sector}`);;
         if (!item) return;
         const flyStar = item.querySelector('.fly-star');
         if (!flyStar) return;
@@ -442,6 +480,9 @@
       const compassAngle = Number(compassAngleInput.value) || 0;
       let displayAngle = (cursorAngle - compassAngle + 360) % 360;
       document.getElementById('cursor-angle-label').textContent = `${Math.round(displayAngle)}°`;
+      if (lastCoords) {
+        debounceFetchCompassData(lastCoords, cursorAngle);
+      }
     }
     setCursorAngle(cursorAngle);
 

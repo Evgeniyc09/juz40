@@ -44,7 +44,22 @@
         <p>12 500</p>
     </div>
 </header>
-
+  <div class="compass__header">
+    <div class="v-btn-back">
+      <a href="">Назад</a>
+    </div>
+    <a href="" class="compass__settings-btn" data-modal-open="modalExample">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-settings2-icon lucide-settings-2">
+        <path d="M14 17H5" />
+        <path d="M19 7h-9" />
+        <circle cx="17" cy="17" r="3" />
+        <circle cx="7" cy="7" r="3" />
+      </svg>
+      Параметры
+    </a>
+  </div>
   <div id="map"></div>
   <div class="plan-back" style="display: none;">
     <img src="../images/dist/plan-back.svg" alt="">
@@ -184,17 +199,7 @@
       </div>
     </div>
   </div>
-  <a href="" class="compass__settings-btn" data-modal-open="modalExample">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"
-      class="lucide lucide-settings2-icon lucide-settings-2">
-      <path d="M14 17H5" />
-      <path d="M19 7h-9" />
-      <circle cx="17" cy="17" r="3" />
-      <circle cx="7" cy="7" r="3" />
-    </svg>
-    Параметры
-  </a>
+
   <div id="modalExample" class="modal">
     <div class="modal__overlay" data-modal-close></div>
     <div class="modal__content" data-city-search="from" data-hidden-input="#hidden-from">

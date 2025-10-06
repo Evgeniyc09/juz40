@@ -804,8 +804,13 @@
     }
   }
 }
+.compass__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
 .compass__settings-btn {
-  position: fixed;
   width: 150px;
   height: 40px;
   display: flex;
@@ -816,7 +821,6 @@
   color: white;
   border-radius: 4px;
   padding: 0 10px;
-  margin: 0 auto;
   left: 0;
   right: 0;
   z-index: 3;

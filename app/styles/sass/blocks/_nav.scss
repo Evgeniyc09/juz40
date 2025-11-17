@@ -1,0 +1,63 @@
+.v-navigation {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+  &__icon {
+    margin: 0 0 4px;
+  }
+
+  &__button {
+    position: relative;
+    color: #313131;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 15px;
+    width: 25%;
+    z-index: 2;
+
+    &--active {
+      color: #987879;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    padding: 1px;
+  }
+
+  &-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    margin: 0 auto;
+    z-index: 5;
+  }
+}

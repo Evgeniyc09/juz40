@@ -2,7 +2,7 @@
 
 $cyan: #5EC1C7 // Accent Color
 $fontsize: 16px // Body Font Size
-$userfont: "Manrope", sans-serif // User Font Family
+$userfont: "Noto Sans", sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -26,17 +26,13 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 		src: url($fwoff2) format('woff2')
 		src: url($fwoff) format('woff')
 		
-@include font('HauoraLight', '../fonts/Hauora-Light.woff2', '../fonts/Hauora-Light.woff', '../fonts/Hauora-Light.ttf',)
-@include font('HauoraRegular', '../fonts/Hauora-Regular.woff2', '../fonts/Hauora-Regular.woff', '../fonts/Hauora-Regular.ttf',)
-@include font('HauoraMedium', '../fonts/Hauora-Medium.woff2', '../fonts/Hauora-Medium.woff', '../fonts/Hauora-Medium.ttf',)
-@include font('HauoraBold', '../fonts/Hauora-Bold.woff2', '../fonts/Hauora-Bold.woff', '../fonts/Hauora-Bold.ttf',)
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@include font('Bebas', '../fonts/bebasneuecyrillic.woff2', '../fonts/bebasneuecyrillic.woff', '../fonts/bebasneuecyrillic.ttf',)
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 // GENERAL CSS SETTINGS
 body
 	font-family: $userfont
 	font-size: $fontsize
-	color: #3E3838
+	color: #313131
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
@@ -53,5 +49,4 @@ body
 	box-sizing: border-box
 
 h1, h2, h3, h4, h5, h6
-	font-family: 'Poiret One', sans-serif
-	color: #C19A6B
+	font-family: 'Noto Sans', sans-serif

@@ -1,4 +1,140 @@
-<div class="v-navigation-container">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <base href="/"> -->
+
+  <title>JUZ40</title>
+  <meta name="description" content="" />
+
+  <meta name="viewport" content="width=390, user-scalable=no" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta property="og:image" content="images/dist/preview.jpg" />
+
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/app.min.css" />
+</head>
+
+<body></body>
+
+</html>
+<div class="page page__bg">
+  <header id="header" class="header">
+    <div class="header__top" style="margin-top: var(--tg-content-safe-area-inset-top);">
+        <img class="header__logo" src="./images/dist/logo.svg" alt="">
+
+        <button class="header__hamburger">
+            <img src="./images/dist/hamburger-ico.svg" alt="">
+        </button>
+    </div>
+    <div class="header__bottom">
+        <a href="" class="header__info">
+            <div class="header__avatar">
+                ИИ
+            </div>
+            <div class="header__personal">
+                <p class="header__welcome">Иван Иванов</p>
+                <p class="header__name">Участник</p>
+            </div>
+        </a>
+
+        <a href="" class="header__coin">
+            0.00₸
+        </a>
+    </div>
+</header>
+
+  <div class="main-page__wrapper">
+    <h3 class="page-title">
+      Текущие курсы <br>
+      и прогресс
+    </h3>
+
+    <div class="main-page__progress">
+
+      <div class="main-page__progress-tag">
+        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.7068 2.5162L7.64618 0.0250487C7.55157 -0.00834958 7.44838 -0.00834958 7.35377 0.0250487L0.293192 2.5162C0.207543 2.54644 0.133365 2.60247 0.0808617 2.67658C0.0283585 2.7507 0.000109523 2.83927 3.17818e-07 2.9301C-0.000108887 3.02093 0.0279271 3.10956 0.0802518 3.1838C0.132577 3.25804 0.20662 3.31425 0.292196 3.34469L7.35278 5.85477C7.44798 5.88864 7.55195 5.88864 7.64715 5.85477L14.7077 3.34469C14.7933 3.31427 14.8674 3.25807 14.9197 3.18383C14.9721 3.10958 15.0001 3.02094 15 2.93011C14.9999 2.83927 14.9716 2.7507 14.9191 2.67657C14.8666 2.60245 14.7924 2.54643 14.7068 2.5162ZM13.9445 8.38205V4.54883L13.0656 4.86128V8.38205C12.8009 8.53442 12.6225 8.81992 12.6225 9.14732C12.6225 9.47468 12.8009 9.76021 13.0656 9.91258V12.0722C13.0656 12.3149 13.2624 12.5117 13.5051 12.5117C13.7478 12.5117 13.9445 12.3149 13.9445 12.0722V9.91261C14.2092 9.76027 14.3876 9.47471 14.3876 9.14735C14.3876 8.81995 14.2093 8.53442 13.9445 8.38205Z"
+            fill="#0D8EB8" />
+          <path
+            d="M7.5002 6.75924C7.34935 6.75924 7.20078 6.7336 7.0586 6.68306L3.08936 5.27197V7.20581C3.08936 7.67893 3.58292 8.07904 4.55634 8.39498C5.40482 8.67037 6.45031 8.82204 7.5002 8.82204C8.55008 8.82204 9.59555 8.67037 10.444 8.39498C11.4175 8.07904 11.911 7.67893 11.911 7.20581V5.27197L7.94182 6.68306C7.80005 6.73353 7.65068 6.75929 7.5002 6.75924Z"
+            fill="#0D8EB8" />
+        </svg>
+
+        Информатика
+      </div>
+      <div class="main-page__progress-label">Урок 1</div>
+      <div class="main-page__progress-description">Основы компьютерных сетей</div>
+
+      <img class="main-page__progress-ico" src="./images/dist/progress-ico.png" alt="">
+
+      <div class="main-page__progress-list">
+        <div class="main-page__progress-item">
+          <div class="main-page__progress-item-label">Урок 1</div>
+
+          <div class="main-page__progress-bar">
+            <div class="main-page__progress-value" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="main-page__progress-item">
+          <div class="main-page__progress-item-label">Урок 2</div>
+
+          <div class="main-page__progress-bar">
+            <div class="main-page__progress-value" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="main-page__progress-item">
+          <div class="main-page__progress-item-label">Урок 3</div>
+
+          <div class="main-page__progress-bar">
+            <div class="main-page__progress-value" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="main-page__progress-item">
+          <div class="main-page__progress-item-label">Урок 4</div>
+
+          <div class="main-page__progress-bar">
+            <div class="main-page__progress-value" style="width: 50%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-page__adv">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="">
+              <img src="./images/dist/banner.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <img src="./images/dist/banner.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <img src="./images/dist/banner.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-navigation-container">
   <div class="v-navigation">
     <a href="" class="v-navigation__button v-navigation__button--active">
       <div class="v-navigation__icon">
@@ -85,3 +221,25 @@
     </a>
   </div>
 </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/app.min.js"></script>
+</body>
+
+</html>
+
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>

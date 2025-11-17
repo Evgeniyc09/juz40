@@ -1,8 +1,7 @@
 // USER VARIABLES SECTION
 
-$cyan: #5EC1C7 // Accent Color
 $fontsize: 16px // Body Font Size
-$userfont: "Noto Sans", sans-serif // User Font Family
+$userfont: "Inter", sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -26,13 +25,12 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 		src: url($fwoff2) format('woff2')
 		src: url($fwoff) format('woff')
 		
-@include font('Bebas', '../fonts/bebasneuecyrillic.woff2', '../fonts/bebasneuecyrillic.woff', '../fonts/bebasneuecyrillic.ttf',)
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 // GENERAL CSS SETTINGS
 body
 	font-family: $userfont
 	font-size: $fontsize
-	color: #313131
+	color: #000000
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
@@ -42,11 +40,7 @@ body
 .page
 	max-width: 390px
 	margin: 0 auto
-	padding: 0 14px
 	overflow: hidden
 
 *
 	box-sizing: border-box
-
-h1, h2, h3, h4, h5, h6
-	font-family: 'Noto Sans', sans-serif

@@ -102,3 +102,61 @@
 .swiper-pagination-bullet-active {
   background: #0d8eb8;
 }
+
+.page-header {
+  position: relative;
+  text-align: center;
+}
+
+.page-header__back-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.module__cover {
+  width: 100%;
+  height: 200px;
+  margin: 0 0 30px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.module__iframe {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  margin: 0 0 30px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.course__title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.course__content {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #8c8c8c;
+}

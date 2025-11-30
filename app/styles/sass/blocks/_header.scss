@@ -50,11 +50,16 @@
 
   &__coin {
     text-decoration: none;
-    color: #0d8eb8;
+    color: #fff;
     font-size: 14px;
     line-height: 1.2;
-    background-color: white;
     padding: 8px;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 22px 22px 10px -20px rgba(255, 255, 255, 0.1),
+      inset -17px -17px 10px -15px rgba(255, 255, 255, 0.1),
+      inset 15px -15px 10px -15px rgba(255, 255, 255, 0.1),
+      inset -15px 15px 10px -15px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
   }
 

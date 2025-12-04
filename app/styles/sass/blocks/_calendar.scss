@@ -40,14 +40,6 @@
   }
 }
 
-.calendar__nav:hover {
-  background: #e5e7eb;
-}
-
-.calendar__nav:active {
-  transform: scale(0.96);
-}
-
 .calendar__weekdays,
 .calendar__grid {
   display: grid;
@@ -148,4 +140,8 @@
   text-decoration: none;
   padding: 14px 32px;
   margin: 12px 0;
+}
+
+.calendar__day--adjacent {
+  opacity: 0.4;
 }

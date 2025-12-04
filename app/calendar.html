@@ -75,3 +75,102 @@
 </div>
 
 <!--#include virtual="./parts/footer.html" -->
+<script>
+  const calendar = document.querySelector('.calendar');
+  const monthTitleEl = calendar.querySelector('.calendar__month');
+  const gridEl = calendar.querySelector('.calendar__grid');
+  const prevBtn = calendar.querySelector('.calendar__nav--prev');
+  const nextBtn = calendar.querySelector('.calendar__nav--next');
+
+  const specialDays = {
+    '2025-12-03': 'green-bg',
+    '2025-12-04': 'green',
+    '2025-12-08': 'red-bg',
+    '2025-12-09': 'red',
+    '2025-12-10': 'today',
+  };
+
+  const monthNames = [
+    'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+  ];
+
+  const today = new Date();
+
+  let current = new Date();
+  current.setDate(1);
+
+  function renderCalendar() {
+    const year = current.getFullYear();
+    const month = current.getMonth();
+
+    monthTitleEl.textContent = `${monthNames[month]} ${year}`;
+    gridEl.innerHTML = '';
+
+    const firstDay = new Date(year, month, 1);
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+    let startWeekday = firstDay.getDay();
+    startWeekday = (startWeekday + 6) % 7;
+
+    const totalCells = 42;
+
+    for (let i = 0; i < totalCells; i++) {
+      const cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'calendar__day';
+
+      const cellDay = i - startWeekday + 1;
+
+      let dateObj;
+      let inCurrent = true;
+
+      if (cellDay <= 0) {
+        dateObj = new Date(year, month - 1, daysInPrevMonth + cellDay);
+        inCurrent = false;
+      } else if (cellDay > daysInMonth) {
+        dateObj = new Date(year, month + 1, cellDay - daysInMonth);
+        inCurrent = false;
+      } else {
+        dateObj = new Date(year, month, cellDay);
+      }
+
+      const d = dateObj.getDate();
+      const m = dateObj.getMonth() + 1;
+      const y = dateObj.getFullYear();
+
+      cell.textContent = d;
+
+      const key = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+
+      if (specialDays[key]) {
+        cell.classList.add(`calendar__day--${specialDays[key]}`);
+      }
+
+      if (!inCurrent) {
+        cell.classList.add('calendar__day--adjacent');
+      }
+
+      if (dateObj.toDateString() === today.toDateString()) {
+        cell.classList.add('calendar__day--today');
+      }
+
+      gridEl.appendChild(cell);
+    }
+  }
+
+  prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    current.setMonth(current.getMonth() - 1);
+    renderCalendar();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    current.setMonth(current.getMonth() + 1);
+    renderCalendar();
+  });
+
+  renderCalendar();
+</script>

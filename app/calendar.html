@@ -83,11 +83,11 @@
   const nextBtn = calendar.querySelector('.calendar__nav--next');
 
   const specialDays = {
-    '2025-12-03': 'green-bg',
-    '2025-12-04': 'green',
-    '2025-12-08': 'red-bg',
-    '2025-12-09': 'red',
-    '2025-12-10': 'today',
+    '2025-12-03': { class: 'green-bg', link: '/some-page?date=2025-12-03' },
+    '2025-12-04': { class: 'green', link: 'https://google.com' },
+    '2025-12-08': { class: 'red-bg', link: '/profile' },
+    '2025-12-09': { class: 'red', link: null },
+    '2025-12-10': { class: 'today', link: '/event/10' },
   };
 
   const monthNames = [
@@ -145,7 +145,16 @@
       const key = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
 
       if (specialDays[key]) {
-        cell.classList.add(`calendar__day--${specialDays[key]}`);
+        const cfg = specialDays[key];
+
+        if (cfg.class) {
+          cell.classList.add(`calendar__day--${cfg.class}`);
+        }
+
+        if (cfg.link) {
+          cell.dataset.link = cfg.link;
+          cell.classList.add('calendar__day--clickable');
+        }
       }
 
       if (!inCurrent) {
@@ -170,6 +179,16 @@
     e.preventDefault();
     current.setMonth(current.getMonth() + 1);
     renderCalendar();
+  });
+
+  gridEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button.calendar__day');
+    if (!btn) return;
+
+    const url = btn.dataset.link;
+    if (url) {
+      window.location.href = url;
+    }
   });
 
   renderCalendar();

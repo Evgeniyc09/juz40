@@ -160,3 +160,220 @@
   line-height: 1.3;
   color: #8c8c8c;
 }
+
+.courses {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    padding: 16px 40px 16px 16px;
+    border-radius: 0 12px 0 12px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 40px;
+      height: 100%;
+      background: url("../images/dist/chevron-link-ico.png") no-repeat
+        center/14px;
+    }
+
+    &:nth-child(odd) {
+      background-color: white;
+      border: 1px solid #e1e1e1;
+    }
+
+    &:nth-child(even) {
+      border: 1px solid #e7f4f8;
+      background-color: #e7f4f8;
+    }
+  }
+
+  &__item-title {
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0 0 4px;
+  }
+
+  &__item-description {
+    color: #8c8c8c;
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0;
+  }
+}
+
+.rating {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 34px 0 60px;
+  }
+  &__item {
+    position: relative;
+    width: 33%;
+    text-align: center;
+
+    &--second,
+    &--third {
+      top: 30px;
+    }
+  }
+  &__item__ava {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 auto 26px;
+    z-index: 3;
+  }
+
+  &__item__laurel {
+    position: absolute;
+    width: 85px;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  &__item__name {
+    font-size: 12px;
+    line-height: 19px;
+    margin: 0;
+  }
+
+  &__item__coin {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 4px;
+    gap: 4px;
+    text-decoration: none;
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  &__table-title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 16px;
+  }
+
+  &__table-wrapper {
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 24px 0;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 0 12px 0 12px;
+  }
+
+  &__table-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    color: #313131;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__table__ava {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__table-col--number {
+    width: 45px;
+  }
+
+  &__table-col--ava {
+    width: 30px;
+  }
+
+  &__table-col--name {
+    width: 100%;
+  }
+
+  &__table-col--coin {
+    width: 100px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+}
+
+.page-header__description {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(#2f2f2f, 0.6);
+}
+
+.community {
+  &__section {
+    margin: 24px 0;
+  }
+  &__section-title {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0 0 12px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    border-radius: 0 12px 0 12px;
+    border: 1px solid #e1e1e1;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #2f2f2f;
+
+    &--blue {
+      background-color: #e7f4f8;
+      border-color: #e7f4f8;
+    }
+  }
+}

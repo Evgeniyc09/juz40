@@ -377,3 +377,155 @@
     }
   }
 }
+
+.coin {
+  &__history {
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  &__history-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  &__history-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #828282;
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid #e1e1e1;
+    margin: 12px 0 0;
+    border-radius: 0 12px 0 12px;
+    font-size: 12px;
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  &__how {
+    text-align: center;
+    padding: 16px;
+    background-color: #e7f4f8;
+    border-radius: 0 12px 0 12px;
+    margin: 24px 0;
+  }
+
+  &__how-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 16px;
+
+    span {
+      color: #0d8eb8;
+    }
+  }
+
+  &__how-title-how {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    margin: 0 0 16px;
+    color: #0d8eb8;
+  }
+
+  &__how-description {
+    font-size: 12px;
+    line-height: 1.2;
+    color: rgba(47, 47, 47, 0.6);
+  }
+
+  &__how-btn {
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #2f2f2f;
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 16px;
+    margin: 12px auto 0;
+    border-radius: 0 12px 0 12px;
+    font-size: 12px;
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  &__tag {
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  &__tag-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    span {
+      color: #0d8eb8;
+    }
+  }
+
+  &__tag-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  &__tag-item {
+    padding: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 0 12px 0 12px;
+  }
+
+  &__howuse {
+    padding: 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 0 12px 0 12px;
+
+    background: url("../images/dist/coin-bg.png") no-repeat right top;
+  }
+
+  &__howuse-title {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0 0 16px;
+  }
+
+  &__howuse-text {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__howuse-ul {
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 1.2;
+    padding-left: 18px;
+  }
+}
